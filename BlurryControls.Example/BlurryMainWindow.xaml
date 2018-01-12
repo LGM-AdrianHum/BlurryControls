@@ -1,0 +1,50 @@
+﻿<controls:BlurryWindow x:Class="BlurryControls.Example.BlurryMainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                       xmlns:control="clr-namespace:BlurryControls.Example.Control"
+                      xmlns:internals="clr-namespace:BlurryControls.Internals;assembly=BlurryControls"
+                      xmlns:controls="clr-namespace:BlurryControls.Controls;assembly=BlurryControls"
+                      mc:Ignorable="d"
+                      Icon="pack://application:,,,/BlurryControls;component/Resources/Icons/256/BlurryWpfWindow.png"
+                      Width="800" Height="600"
+                      WindowStartupLocation="CenterScreen"
+                      Title="I am a blurry window">
+    <controls:BlurryWindow.AdditionalMenuBarButtons>
+        <internals:ButtonCollection>
+            <Button x:Name="HelloMenuBarButton"
+                    Click="HelloMenuBarButton_OnClick"
+                    ToolTip="Do the thing!"
+                    Width="100">
+                <Button.Content>
+                    <TextBlock Text="Click Me!"/>
+                </Button.Content>
+            </Button>
+        </internals:ButtonCollection>
+    </controls:BlurryWindow.AdditionalMenuBarButtons>
+
+    <Grid>
+        <!-- sample control with basic components -->
+        <TabControl Margin="5">
+            <TabItem Header="Tray Invoker">
+                <control:BlurryContentControl />
+            </TabItem>
+            <TabItem Header="Animation" IsEnabled="False">
+                <control:BlurryBackgroundAnimationControl/>
+            </TabItem>
+            <TabItem Header="Blurry Doge">
+                <control:BlurryDogeControl />
+            </TabItem>
+            <TabItem Header="Doge Dialog">
+                <control:BlurryDogeDialogControl/>
+            </TabItem>
+            <TabItem Header="Blur Behind">
+                <control:BlurBehindDialogControl/>
+            </TabItem>
+            <TabItem Header="Blurry Overlay">
+                <control:BlurryUserControl/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</controls:BlurryWindow>

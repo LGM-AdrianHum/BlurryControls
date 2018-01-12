@@ -1,13 +1,12 @@
-The BlurryControls library is meant to give your application a blurry look as it is known from the "AeroGlass" design.
+## Blur all the things! <img src="https://i.imgur.com/zbZR9o9.png" height="32">
 
-! _It is only meant to be used on Windows 10 since the used strategy does not work on prior versions of Windows._
+The BlurryControls library is meant to give your application a blurry look as it is known from the _AeroGlass_ design.
+Please consider that this library runs on Windows 10 only! On Windows 8.1 or older operating systems the application may just appear transparent without any effect. The blurry look is not to be confused with the Acrylic Material appearance of UWP applications.
 
-## Which controls does the BlurryControls.dll provide?
+If you have suggestions or questions, feel free to contact me. :)
 
-1. _BlurryWindowBase_: you can inherit from BlurryWindowBase to create a blurry window
-2. _BlurryTrayBase_: you can inherit from BlurryTrayBase to create a control which appears in the bottom right corner of your workspace, it is a convinient way to implement a control invoked by a tray icon (comes with an animation)
-3. _BlurryDialogWindow_: this one can only be in invoked by BlurryMessageBox which provides similar functionality to the conventional MessageBox provided by Microsoft
+![A screenshot of the example project](https://i.imgur.com/XjKjmdK.jpg)
 
-## What else comes with it?
+It is availlable on NuGet via: `PM> Install-Package BlurryControls`
 
-In the solution you will find a project called BlurryWindowInvoker. It provides a short presentation of what the BlurryControls.dll is capable of.
+Have a look at the [Wiki](https://github.com/ConfusedHorse/BlurryControls/wiki) or the provided example project called _BlurryControls.Example_. For the latter make sure you are using the latest version of Visual Studio since the solution is coded with C#7 and some syntaxes may not be interpreted by the compiler otherwise.
